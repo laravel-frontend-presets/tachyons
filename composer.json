@@ -8,13 +8,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Dyrynda\\Laravel\\FrontendPresets\\Tachyons\\": "src/"
+            "Dyrynda\\LaravelPresets\\Tachyons\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dyrynda\\Laravel\\FrontendPresets\\Tachyons\\TachyonsPresetServiceProvider"
+                "Dyrynda\\LaravelPresets\\Tachyons\\TachyonsPresetServiceProvider"
             ]
         }
     }
