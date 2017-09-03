@@ -6,12 +6,9 @@ use Illuminate\Support\Arr;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Console\Presets\Preset;
-use Illuminate\Console\DetectsApplicationNamespace;
 
 class TachyonsPreset extends Preset
 {
-    use DetectsApplicationNamespace;
-
     public static function install()
     {
         static::updatePackages();
