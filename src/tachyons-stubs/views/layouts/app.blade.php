@@ -15,26 +15,25 @@
 </head>
 <body>
     <div id="app">
-        <nav class="pa3 pa4-ns">
-            <a class="link dim black b f6 f5-ns dib mr3" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+        <nav class="db dt-l w-100 border-box pa3 ph5-l bg-almost bg-light-gray">
+            <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l tracked ttu" href="#" title="Home">
+                {{ config('app.name') }}
             </a>
-            @guest
-                <a class="link dim gray f6 f5-ns dib mr3" href="{{ route('login') }}" title="Login">Login</a>
-                <a class="link dim gray f6 f5-ns dib mr3" href="{{ route('register') }}" title="Register">Register</a>
-            @else
-                <a class="link dim black b f6 f5-ns dib mr3" href="#">
-                    {{ Auth::user()->name }}
-                </a>
-                <a class="link dim gray f6 f5-ns dib mr3"
-                   href="{{ route('logout') }}"
-                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                >
-                    Logout
-                </a>
-            @endguest
+            <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+                @guest
+                    <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l tracked" href="{{ url('/login') }}">Login</a>
+                    <a class="link dim dark-gray f6 f5-l dib tracked" href="{{ url('/register') }}">Register</a>
+                @else
+                    <a href="{{ route('logout') }}"
+                        class="link dim dark-gray f6 f5-l dib mr3 mr4-l tracked"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @endguest
+            </div>
         </nav>
-
         @yield('content')
     </div>
 
