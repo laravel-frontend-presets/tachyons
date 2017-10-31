@@ -13,6 +13,7 @@ class TachyonsPreset extends Preset
     {
         static::updatePackages();
         static::updateSass();
+        static::updateBootstrapping();
         static::updateWelcomePage();
         static::removeNodeModules();
     }
