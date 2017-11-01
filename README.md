@@ -1,50 +1,16 @@
-# Tachyons preset for the Laravel framework
+# Laravel 5.5.x Frontend Preset for Tachyons
 
-This package makes it easy to use [Tachyons](http://tachyons.io) with Laravel 5.5+.
+Preset for [Tachyons](http://tachyons.io) scaffolding on a new Laravel 5.5.x project.
 
-## Contents
+*Current version:* **Tachyons 4.9.0**
 
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
+## Usage
 
-<a name="installation"></a>
-## Installation
-
-```bash
-composer require laravel-frontend-presets/tachyons
-```
-
-### Setting up the new preset
-```bash
-php artisan preset tachyons
-```
-
-### Auth scaffolding
-```bash
-php artisan preset tachyons-auth
-```
-
-### Compiling assets
-```bash
-npm install && npm run dev
-```
-
-Enjoy!
-
-<a name="contributing"></a>
-## Contributing
-
-Please check our contributing rules in [our website](https://laravel-frontend-presets.github.io) for details.
-
-<a name="credits"></a>
-## Credits
-
-- [Michael Dyrynda](https://github.com/michaeldyrynda)
-- [All Contributors](../../contributors)
-
-<a name="license"></a>
-## License
-
-The MIT License (MIT).
+1. Fresh install Laravel 5.5.x and `cd` to your app.
+2. Install this preset via `composer require laravel-frontend-presets/tachyons`. Laravel 5.5.x will automatically discover this package. No need to register the service provider.
+3. Use `php artisan preset tachyons` for the basic Tachyons preset OR Use `php artisan preset tachyons-auth` for basic preset, auth route entry and Tachyons auth views in one go. (NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in `routes/web.php`)
+4. `npm install`
+5. `npm run dev`
+6. Configure your favorite database (mysql, sqlite etc.)
+7. `php artisan migrate` to create basic user tables.
+8. `php artisan serve` (or equivalent) to run server and test preset.
