@@ -1,6 +1,6 @@
 <?php
 
-namespace Dyrynda\LaravelPresets\Tachyons;
+namespace LaravelFrontendPresets\TachyonsPreset;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;

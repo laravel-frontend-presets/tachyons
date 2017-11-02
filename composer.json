@@ -1,5 +1,5 @@
 {
-    "name": "dyrynda/laravel-preset-tachyons",
+    "name": "laravel-frontend-presets/tachyons",
     "description": "Laravel 5.5 frontend preset for Tachyons",
     "keywords": ["laravel", "preset", "tachyons"],
     "license": "MIT",
@@ -8,13 +8,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Dyrynda\\LaravelPresets\\Tachyons\\": "src/"
+            "LaravelFrontendPresets\\TachyonsPreset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dyrynda\\LaravelPresets\\Tachyons\\TachyonsPresetServiceProvider"
+                "LaravelFrontendPresets\\TachyonsPreset\\TachyonsPresetServiceProvider"
             ]
         }
     }
